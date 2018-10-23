@@ -1,0 +1,10 @@
+.btn {
+  border: 1px gainsboro dashed;
+  border-radius: 4px;
+  width: 120px;
+  cursor: pointer;
+  height: 30px;
+  margin-right: 20px;
+  background: deepskyblue;
+  color: white;
+}
