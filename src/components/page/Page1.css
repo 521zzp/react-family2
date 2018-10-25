@@ -1,0 +1,17 @@
+.page-box{
+  border: 1px aquamarine dashed;
+}
+.pic{
+  width: 500px;
+}
+.group{
+  display: flex;
+  justify-content: space-between;
+}
+html,body{
+  padding: 0;
+  margin: 0;
+}
+::placeholder {
+  color: green;
+}

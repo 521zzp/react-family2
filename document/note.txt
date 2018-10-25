@@ -1,0 +1,2 @@
+IE6问题:
+This browser doesn't support requestAnimationFrame. Make sure that you load a polyfill in older browsers. https://fb.me/react-polyfills
