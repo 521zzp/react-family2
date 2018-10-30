@@ -20,7 +20,7 @@ function Counter({
       <button onClick={ () => dec() } className='btn'>自减</button>
 
       <button onClick={ () => res() } className='btn'>重置</button>
-      <p>已是黄昏独自愁，测试hash变更 2215天涯何处无芳草 luck 当木龙骨</p>
+      <p>已是黄昏独自愁，测试hash变更 2215天涯何处无芳草 luck 67890</p>
     </div>
   )
 }

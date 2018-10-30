@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const util = require('./webpack.config.util')
 
 module.exports = {
   /*入口*/
@@ -11,7 +12,8 @@ module.exports = {
   /*输出到dist文件夹，输出文件名字为bundle.js*/
   output: {
     path: path.join(__dirname, './dist'),
-    chunkFilename: '[name].[chunkhash:8].js',
+    //chunkFilename: path.posix.join('static', 'js/[name].[chunkhash:8].js'),
+    chunkFilename: util.assetsPath('js/[name].[chunkhash:8].js')
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -29,12 +31,13 @@ module.exports = {
       },
       // 编译图片
       {
-        test: /\.(png|jpg|jpeg|bpm|gif)$/,
+        test: /\.(png|jpg|jpeg|bpm|gif|svg)$/,
         use:[
           {
             loader: 'url-loader',
             options: {
-              limit: 8192
+              limit: 8192,
+              name: util.assetsPath('img/[name]-[hash:8].[ext]')
             }
           }
         ]

@@ -24,7 +24,7 @@ const devConfig = {
   * */
   devServer: {
     contentBase: path.join(__dirname, './dist'),
-    port: 8000,
+    port: 8001,
     historyApiFallback: true,
     hot: true
   },
@@ -47,7 +47,11 @@ const devConfig = {
       // 编译CSS
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader']
+        use: [
+          'style-loader',
+          'css-loader?modules&localIdentName=[local]-[hash:base64:5]',
+          'postcss-loader'
+        ]
       },
       // 编译图片
       // {

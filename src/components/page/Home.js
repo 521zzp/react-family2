@@ -10,7 +10,7 @@ function Home() {
         <li><Link to='/counter'>counter</Link></li>
         <li><Link to='/userInfo'>UserInfo</Link></li>
       </ul>
-      <div>主页</div>
+      <div>主页1333300</div>
     </div>
   )
 

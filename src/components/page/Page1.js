@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Page1.css'
+import styles from './Page1.css'
 import image from '@/assets/image/2 - 64549508_p0.png'
 
 export default class Home extends Component {
@@ -18,14 +18,15 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div className='page-box'>
-        this is home~哈 milk dodo kanadaxx 我寄愁心与明月，日东月西兮徒相忘<br/>
+      <div className={ styles['page-box'] }>
+        this is home~哈 milk dodo kanadaxx 我寄愁心与明月，日东月西兮徒相忘，
+        不能相随兮空断肠， xx<br/>
         当前计数：{this.state.count}<br/>
         <button onClick={() => this._handleClick()}>自增</button>
-        <div className='group'>
-          <img src={image} alt="" className='pic'/>
-          <img src={image} alt="" className='pic'/>
-          <img src={image} alt="" className='pic'/>
+        <div className={ styles.group }>
+          <img src={image} alt="" className={ styles.pic }/>
+          <img src={image} alt="" className={ styles.pic }/>
+          <img src={image} alt="" className={ styles.pic }/>
         </div>
         <input type="text" placeholder="请输入账号……"/>
       </div>

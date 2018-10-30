@@ -6,6 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const util = require('./webpack.config.util')
 
 // 公共配置
 const commonConfig = require('./webpack.common.config.js');
@@ -42,13 +43,15 @@ const publicConfig = {
     //   }
     // }),
     // 打包前清空dist
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['dist/*']),
     // css抽取
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "[name][chunkhash:8].css",
-      chunkFilename: "[name].[chunkhash:8].css"
+      //filename: "[name][chunkhash:8].css",
+      //filename: path.posix.join('static', 'css/[name].[chunkhash:8].css'),
+      filename: util.assetsPath('css/[name].[chunkhash:8].css'),
+      chunkFilename: util.assetsPath('css/[name].[chunkhash:8].css')
     })
 
   ],
@@ -70,7 +73,7 @@ const publicConfig = {
               publicPath: '../'
             }
           },
-          'css-loader',
+          'css-loader?modules&localIdentName=[local]-[hash:base64:5]',
           'postcss-loader'
         ]
       },
