@@ -16,9 +16,9 @@ function UserInfo({
           (
             user_info.error_msg ? user_info.error_msg :
               <div>
-                <p>用户信息：</p>
-                <p>用户名：{ user_info.name }</p>
-                <p>介绍：{ user_info.intro }</p>
+                <p>用户信息 3667 88：</p>
+                <p>用户名account：{ user_info.name }</p>
+                <p>介绍 introduce：{ user_info.intro }</p>
               </div>
           )
       }

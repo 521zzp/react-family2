@@ -11,8 +11,18 @@ import store from './store/store'
 /!*模块热替换*!/
 if (module.hot) {
   module.hot.accept('./components/App', () => {
-    const GetRouter = require('./components/App').default;
+    console.log('模块热替换————————————————————————————————————————')
+    const App = require('./components/App').default;
     renderWithHotReload(App());
+  });
+}*/
+
+/*初始化*/
+/*renderWithHotReload(GetRouter());
+if (module.hot) {
+  module.hot.accept('./router/router', () => {
+    const GetRouter = require('./router/router').default;
+    renderWithHotReload(GetRouter());
   });
 }*/
 

@@ -71,3 +71,34 @@ const GetRouter = () => (
 )
 
 export default GetRouter*/
+
+
+//无懒加载：
+
+/*
+import React from 'react'
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
+
+import Home from '../components/page/Home';
+import Page1 from '../components/page/Page1';
+import Counter from '../components/page/Counter';
+import UserInfo from '../components/page/UserInfo';
+import NotFound from '../components/page/NotFound';
+
+
+const GetRouter = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path='/' component={ Home }></Route>
+      <Route path='/page1' component={ Page1 }></Route>
+      <Route path='/counter' component={ Counter }></Route>
+      <Route path='/userInfo' component={ UserInfo }></Route>
+      <Route component={ NotFound }></Route>
+    </Switch>
+  </BrowserRouter>
+
+)
+
+export default GetRouter
+*/
+

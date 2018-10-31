@@ -15,3 +15,8 @@ html,body{
 ::placeholder {
   color: green;
 }
+.poem{
+  color: burlywood;
+  text-align: center;
+  letter-spacing: .5em;
+}
